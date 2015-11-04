@@ -22,6 +22,13 @@
       <h1 class="text-center">Markdown live preview</h1>
       
       <div class="well">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#write">Write</a></li>
+          <li><a data-toggle="tab" href="#preview" onClick="run()">Preview</a></li>
+        </ul>
+        
+        <hr>
+       
         <div class="btn-group" role="group">
           <button onClick="$('#source-text-area').mdHeader({number: 1})" class="btn btn-default">H1</button>
           <button onClick="$('#source-text-area').mdHeader({number: 2})" class="btn btn-default">H2</button>
@@ -47,11 +54,21 @@
         </div>
         
         <button onClick="$('#source-text-area').mdCode()" class="btn btn-default pull-right">Code</button>
-      </div>
-      
-      
-      
-    </div>
+        
+        <hr>
+  
+        <div class="tab-content">
+          <div id="write" class="tab-pane fade in active">
+            <textarea class="form-control" rows="20" id="source-text-area"></textarea>
+          </div>
+          <div id="preview" class="tab-pane fade">
+            <div id="targetDiv" class="form-control" style="min-height: 414px;"></div>
+          </div>
+        </div>
+        
+      </div><!-- well-->
+    </div><!-- container-->
+
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
