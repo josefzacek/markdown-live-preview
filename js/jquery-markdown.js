@@ -73,7 +73,7 @@ $.fn.mdHeader = function(options) {
 $.fn.mdLink = function(options) {
     var settings = $.extend({
         default_text: "Link Text Here",
-        default_url: "URL Here"
+        default_url: "http://"
     }, options);
     $(this).textReplace({
         selected: function(text) {
@@ -86,9 +86,9 @@ $.fn.mdLink = function(options) {
 };
 $.fn.mdImage = function(options) {
     var settings = $.extend({
-        default_alt_text: "",
+        default_alt_text: "alt text",
         default_image_url: "Image URL Here",
-        default_image_title: ""
+        default_image_title: "title"
     }, options);
     $(this).textReplace({
         selected: function(image_link) {
