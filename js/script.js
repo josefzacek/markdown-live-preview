@@ -5,3 +5,10 @@ function LivePreview() {
   html = converter.makeHtml(text);
   target.innerHTML = html;
 }
+
+function FullScreen() {
+  $( "body>div" ).removeClass( "container" );
+  $( "body>div" ).addClass( "container-fluid" );
+  $( "body>div>h1" ).removeClass("text-center");
+  $( "body>div>h1" ).css("display", "none");
+}
