@@ -187,3 +187,13 @@ $.fn.mdBulletList = function(options) {
         }
     });
 }
+$.fn.mdLine = function(options) {
+    var settings = $.extend({
+        default: "***"
+    }, options);
+    $(this).textReplace({
+        no_selection: function() {
+            return "***";
+        }
+    });
+};
